@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int BinarytoDec(int Bina){
+    int ans = 0;
+    int pow = 1;
+    while( Bina > 0 ){
+        int rem = Bina % 10;
+        Bina /= 10;
+        
+        ans += (pow * rem);
+        pow *= 2;
+    }
+    return ans;
+}
+
+int main() {
+    int n = 1010111;
+    cout << BinarytoDec(n) << endl;
+
+    return 0;
+}
