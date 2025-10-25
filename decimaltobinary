@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int DectoBinary(int Dec){
+    int ans = 0;
+    int pow = 1;
+    while( Dec > 0 ){
+        int rem = Dec % 2;
+        Dec /= 2;
+        
+        ans += (pow * rem);
+        pow *= 10;
+    }
+    return ans;
+}
+
+int main() {
+    int n = 11;
+    cout << DectoBinary(n) << endl;
+
+    return 0;
+}
